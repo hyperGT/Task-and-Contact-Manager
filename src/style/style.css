@@ -21,11 +21,13 @@ header{
 }
 
 ul{
-    list-style-type: none;        
+    list-style-type: none;
+    text-align: center;
 }
 
 ul a{
-    text-decoration: none;    
+    text-decoration: none;
+    color: rgb(203, 235, 27);
 }
 
 ul li {
@@ -37,7 +39,7 @@ ul li {
 }
 
 ul li:hover {
-    background: #fdd0f9;
+    background: #136cc5;
 }
 
 h1{
@@ -47,8 +49,21 @@ h1{
 
 .form-container{
     max-width: 600px;
+    height: auto;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px;    
+}
+
+.form-container button{
+    padding: 10px 20px;
+    border: none;
+    background: #349638;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container button:hover{
+    background: #45a049;
 }
 
 form fieldset{

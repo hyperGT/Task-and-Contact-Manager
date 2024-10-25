@@ -1,0 +1,7 @@
+body{
+    background-color: #DA70D6;
+}
+
+ul li:hover {
+    background: #da53d5;
+}
