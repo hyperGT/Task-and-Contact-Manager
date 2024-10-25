@@ -1,0 +1,16 @@
+body{
+    background: gray;
+    text-align: center;
+}
+
+ul a {
+    color: rgb(0, 225, 255);    
+}
+
+ul li{
+    background: #333;
+}
+
+ul li:hover {
+    background: #666;
+}
