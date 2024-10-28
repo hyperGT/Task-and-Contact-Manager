@@ -37,24 +37,32 @@
                     <input type="text" id="taskInput" name="task">
                 </label><br><br>
                 <button type="submit">Add Task</button>
+                <button type="submit" name="action" value="clear">Remove All Tasks</button>
             </fieldset>
         </form>
     </div>
 
-    <?php   
-    if(isset($_GET['task'])){
-        $_SESSION['tasks_list'] [] = $_GET['task'];  // Adding new task to the array. / Adicionando uma nova tarefa ao array.        
+    <?php
+
+    // Clearing all tasks 
+    if(isset($_GET['action']) && $_GET['action'] == 'clear'){
+        unset($_SESSION['tasks_list']);  // Removing all tasks from the session.
     }
 
-    $tasks_list = array();  // Initializing an empty array to store tasks. / Inicializando um array vazio para armazenar as tarefas. 
+    if(isset($_GET['task'])){        
+        
+        $_SESSION['tasks_list'] [] = $_GET['task'];  // Adding new task to the array. 
+    }
+
+    $tasks_list = array();  // Initializing an empty array to store tasks.
 
     if(isset($_SESSION['tasks_list'])) {
-        $tasks_list = $_SESSION['tasks_list'];  // Retrieving tasks from the session. / Recuperando as tarefas do sessão.
+        $tasks_list = $_SESSION['tasks_list'];  // Retrieving tasks from the session.
     }
     ?>
 
     <div class="table-container">
-        <!-- Displaying tasks / Exibindo as tarefas -->
+        <!-- Displaying tasks  -->
         <table>
             <tr>
                 <th>Tasks List:</th>            
