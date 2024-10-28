@@ -5,7 +5,8 @@
 ### Features:
 
 #### Task Manager:
-- Add new tasks 
+- Add new tasks
+- Remove All tasks
 
 #### Contacts Manager:
-in working progress...
+- Add new Contacts 
