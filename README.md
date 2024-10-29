@@ -1,4 +1,5 @@
-# Task and Contact Manager
+# Task and Contact Manager 
+by gtx❤️
 
 **Task and Contact Manager** é uma aplicação web simples que permite gerenciar suas tarefas diárias e manter uma lista de contatos organizada. Este projeto é ideal para quem quer aprender e praticar PHP e manipulação de cookies e sessões.
 Visão Geral
