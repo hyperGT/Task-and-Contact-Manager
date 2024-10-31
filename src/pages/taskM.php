@@ -1,6 +1,22 @@
-<?php session_start();?>
+<?php
+
+    session_start();
+
+    // Clearing all tasks 
+    if(isset($_GET['action']) && $_GET['action'] == 'clear'){
+        unset($_SESSION['tasks_list']);  // Removing all tasks from the session.
+    }
+
+    if(isset($_GET['task'])){        
+        
+        $_SESSION['tasks_list'] [] = $_GET['task'];  // Adding new task to the array. 
+    }
+
+    $tasks_list = isset($_SESSION['tasks_list']) ? $_SESSION['tasks_list'] : array();  // Initializing an empty array to store tasks.    
+?>
+
 <!DOCTYPE html>
-<html lang="pt-en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
@@ -13,7 +29,7 @@
         <div class="title">
             <h1>Task Manager</h1>
         </div>
-    
+
         <div class="nav-bar">
             <ul>
                 <li>
@@ -42,24 +58,6 @@
         </form>
     </div>
 
-    <?php
-
-    // Clearing all tasks 
-    if(isset($_GET['action']) && $_GET['action'] == 'clear'){
-        unset($_SESSION['tasks_list']);  // Removing all tasks from the session.
-    }
-
-    if(isset($_GET['task'])){        
-        
-        $_SESSION['tasks_list'] [] = $_GET['task'];  // Adding new task to the array. 
-    }
-
-    $tasks_list = array();  // Initializing an empty array to store tasks.
-
-    if(isset($_SESSION['tasks_list'])) {
-        $tasks_list = $_SESSION['tasks_list'];  // Retrieving tasks from the session.
-    }
-    ?>
 
     <div class="table-container">
         <!-- Displaying tasks  -->
