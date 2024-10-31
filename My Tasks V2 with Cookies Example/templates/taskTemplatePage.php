@@ -63,7 +63,7 @@
                 </fieldset><br><br>
 
                 <label for="checkBox">
-                    Tarefa Concluída:
+                    Task Completed?:
                     <input type="checkbox" name="completed" value="y">
                 </label><br><br>
 
