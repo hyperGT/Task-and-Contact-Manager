@@ -17,7 +17,7 @@
     // Clearing all tasks 
     if (isset($_GET['action']) && $_GET['action'] == 'clear') {
         setcookie('tasks_list', '', time() - 3600, "/");  // Removing all tasks from the session.
-        $tasks_list = [];
+        $tasks_list = []; 
         $msg = "Tasks cleared successfully! Please refresh the page to see the changes.";
     }
 ?>
