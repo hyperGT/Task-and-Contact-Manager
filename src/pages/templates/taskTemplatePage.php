@@ -95,7 +95,7 @@
                         <td><?php echo htmlspecialchars($task['description']); ?></td>
                         <td><?php echo htmlspecialchars($task['deadline']); ?></td>
                         <td><?php echo htmlspecialchars($task['priority']); ?></td>
-                        <td><?php echo $task['completed'] === 'Yes' ? 'Yes' : 'No'; ?></td>
+                        <td><?php echo $task['completed'] === 'y' ? '⭐' : NULL; ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else : ?>
@@ -103,7 +103,6 @@
                     <td colspan="5">No tasks available.</td>
                 </tr>
             <?php endif; ?>
-
         </table>
     </div>
 

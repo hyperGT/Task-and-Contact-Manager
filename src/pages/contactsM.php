@@ -19,12 +19,16 @@ session_start();
         $new_contact = [
             'name' => $_GET['contactName'],
             'email' => $_GET['contactEmail'],
-            'phone' => $_GET['contactPhone']
+            'phone' => $_GET['contactPhone'],
+            'description' => $_GET['contactDescription'] ?? '',
+            'birthday' => $_GET['contactBirthday'] ?? '',
+            'favorite' => isset($_GET['favorite']) ? 'yes' : 'no'
         ];
+
         $_SESSION['contacts_list'][] = $new_contact; // Add the new contact to the contacts list
     }
 
     $contacts_list = $_SESSION['contacts_list'];    // Upadate the contacts list with the new contact
 
-
+    /*var_dump($contacts_list);*/
     include './templates/contactsTemplatePage.php'; // including the template page

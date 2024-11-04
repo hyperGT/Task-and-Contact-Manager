@@ -25,7 +25,7 @@ if (isset($_GET['name']) && $_GET['name'] !== '') {
         'priority' => $_GET['priority'],
         'completed' => isset($_GET['completed']) ? 'Yes' : 'No'
     ];         
-
+    
     
     if(!empty(($new_task['name']))){
         $_SESSION['tasks_list'][] = $new_task;  // Adding the task to the session.
