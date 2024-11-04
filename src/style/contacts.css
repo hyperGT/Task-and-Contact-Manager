@@ -1,7 +1,12 @@
-body{
+body {
     background-color: #DA70D6;
 }
 
 ul li:hover {
     background: #da53d5;
+}
+
+.favorite-column {
+    text-align: center;
+    vertical-align: middle;
 }

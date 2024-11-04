@@ -81,7 +81,12 @@ form fieldset {
 
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse;    
+}
+
+th, td {
+    text-align: center;
+    padding: 3px;
 }
 
 table th {
